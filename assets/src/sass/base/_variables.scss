@@ -1,0 +1,84 @@
+/*-------------------------
+*  Grid
+*--------------------------*/
+$columns: 12;
+$gutter: 10px;
+$spacing: 20;
+
+/*-------------------------
+*  Spacing
+*--------------------------*/
+$paddings: (
+  "pt": "padding-top",
+  "pr": "padding-right",
+  "pb": "padding-bottom",
+  "pl": "padding-left"
+);
+$margins: (
+  "mt": "margin-top",
+  "mr": "margin-right",
+  "mb": "margin-bottom",
+  "ml": "margin-left"
+);
+
+/*-------------------------
+*  Media Queries
+*--------------------------*/
+$xs: 480px;
+$sm: 600px;
+$md: 800px;
+$lg: 1190px;
+$xl: 1440px;
+$xxl: 1700px;
+
+$breakpoints: (
+  "xs": $xs,
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl
+);
+
+/*-------------------------
+*  Colours
+*--------------------------*/
+$white: #fff;
+$black: #000;
+$light-grey: #efefef;
+
+// custom colours
+$primary: #ffd600;
+$secondary: #5276ac;
+$secondary-light: #69aed5;
+
+$gray1: #fbfbfc;
+$gray2: #e6ebef;
+$gray3: #c4c6d2;
+$gray4: #7c7d87;
+$gray5: #50515a;
+$gray6: #1d1d20;
+
+$colours: (
+  "white": $white,
+  "black": $black,
+  "light-grey": $light-grey
+);
+
+/*-------------------------
+*  Typography
+*--------------------------*/
+$base-font: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$base-fs: 16px;
+
+/*-------------------------
+*  Animations
+*--------------------------*/
+$time: 320ms;
+$time_slow: 1000ms;
+
+$swing: cubic-bezier(0.18, 0.46, 0, 1.01);
+$swift: cubic-bezier(0.4, 0, 0.04, 1.01);
+$ease: ease;
+
+$transition-default: all $time $ease;

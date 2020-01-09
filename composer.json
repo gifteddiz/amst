@@ -1,0 +1,36 @@
+{
+  "name": "gifteddiz/amst",
+  "description": "Andrey Medvedev Starter Theme for Wordpress",
+  "keywords": [
+    "WordPress",
+    "Theme",
+    "Starter"
+  ],
+  "license": "GPL-3.0",
+  "version": "3.0.5",
+  "authors": [
+    {
+      "name": "Andrey Medvedev",
+      "email": "hi@andrey-medvedev.ru",
+      "homepage": "https://andrey-medvedev.ru/",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "vlucas/phpdotenv": "^3.3"
+  },
+  "require-dev": {
+    "jakub-onderka/php-parallel-lint": "^1.0.0",
+    "phpcompatibility/phpcompatibility-wp": "^2.0.0",
+    "wp-coding-standards/wpcs": "^2.0.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "amst\\": "./inc"
+    },
+    "files": [
+      "./inc/Helpers.php"
+    ]
+  }
+}

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&display=swap");
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $base-font;
+  font-weight: 400;
+
+  font-size: rem(16px);
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $gray6;
+}
+
+body {
+  position: relative;
+  background-color: #fff;
+}
+
+html {
+  font-size: 1rem;
+  @include media-breakpoint-only(lg) {
+    font-size: 0.9rem;
+  }
+  @include media-breakpoint-only(md) {
+    font-size: 0.7rem;
+  }
+  @include media-breakpoint-only(sm) {
+    font-size: 0.8rem;
+  }
+  @include media-breakpoint-only(xs) {
+    font-size: 0.8rem;
+  }
+}
+
+// Headings
+h1,
+.h1 {
+  font-size: rem(42px);
+  color: $gray6;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h2,
+.h2 {
+  font-size: rem(32px);
+  color: $gray6;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h3,
+.h3 {
+  font-size: rem(24px);
+  color: $gray6;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h4,
+.h4 {
+  font-size: rem(18px);
+  color: $gray6;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h5,
+.h5 {
+  font-size: rem(14px);
+  margin-bottom: rem(5px);
+  color: $gray6;
+  font-weight: normal;
+  line-height: 1;
+}
+
+small,
+.small {
+  font-size: 0.7em;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  td {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+// alignments
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+// Modifiers
+.text-bold {
+  font-weight: 700;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.no-line-height {
+  line-height: 1em !important;
+}
+
+a {
+  color: #5276ac;
+  &:hover {
+    color: lighten(#5276ac, 20%);
+  }
+}
+
+strong {
+  font-weight: 400;
+  color: $gray6;
+}
+
+.typography {
+  @include clearfix;
+}
