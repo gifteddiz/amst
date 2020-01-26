@@ -129,10 +129,21 @@ span.wpcf7-not-valid-tip {
   border-radius: 0 0 5px 5px;
 }
 
-input,
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
 textarea {
   box-shadow: 0 !important;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+input[type="submit"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  cursor: pointer;
+  transition: all $time;
 }
