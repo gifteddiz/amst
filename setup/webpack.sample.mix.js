@@ -31,7 +31,10 @@ mix.setPublicPath("./assets/dist");
 // Compile assets
 mix
   .js("assets/src/scripts/app.js", "assets/dist/js")
-  .sass("assets/src/sass/style.scss", "assets/dist/css");
+  .sass("assets/src/sass/style.scss", "assets/dist/css")
+  .options({
+    processCssUrls: false
+  });
 
 // Add versioning to assets in production environment
 if (mix.inProduction()) {
