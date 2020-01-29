@@ -1,0 +1,6 @@
+{
+  "path-autocomplete.pathMappings": {
+    "images/": "${folder}/assets/dist/images/",
+    "../images/": "${folder}/assets/dist/images/"
+  }
+}
