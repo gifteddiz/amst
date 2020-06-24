@@ -147,3 +147,9 @@ select {
   cursor: pointer;
   transition: all $time;
 }
+
+.hide-mobile {
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
