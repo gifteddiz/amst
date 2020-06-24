@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Helpers methods
  * List all your static functions you wish to use globally on your theme
@@ -6,23 +7,24 @@
  * @package amst
  */
 
-if ( ! function_exists( 'dd' ) ) {
+if (!function_exists('dd')) {
 	/**
 	 * Var_dump and die method
 	 *
 	 * @return void
 	 */
-	function dd() {
+	function dd()
+	{
 		echo '<pre>';
-		array_map( function( $x ) {
-			var_dump( $x );
-		}, func_get_args() );
+		array_map(function ($x) {
+			var_dump($x);
+		}, func_get_args());
 		echo '</pre>';
 		die;
 	}
 }
 
-if ( ! function_exists( 'starts_with' ) ) {
+if (!function_exists('starts_with')) {
 	/**
 	 * Determine if a given string starts with a given substring.
 	 *
@@ -41,7 +43,7 @@ if ( ! function_exists( 'starts_with' ) ) {
 	}
 }
 
-if (! function_exists('mix')) {
+if (!function_exists('mix')) {
 	/**
 	 * Get the path to a versioned Mix file.
 	 *
@@ -53,24 +55,24 @@ if (! function_exists('mix')) {
 	 */
 	function mix($path, $manifestDirectory = '')
 	{
-		if (! $manifestDirectory) {
+		if (!$manifestDirectory) {
 			//Setup path for standard amst-Folder-Structure
 			$manifestDirectory = "assets/dist/";
 		}
 		static $manifest;
-		if (! starts_with($path, '/')) {
+		if (!starts_with($path, '/')) {
 			$path = "/{$path}";
 		}
-		if ($manifestDirectory && ! starts_with($manifestDirectory, '/')) {
+		if ($manifestDirectory && !starts_with($manifestDirectory, '/')) {
 			$manifestDirectory = "/{$manifestDirectory}";
 		}
 		$rootDir = dirname(__FILE__, 2);
-		if (file_exists($rootDir . '/' . $manifestDirectory.'/hot')) {
+		if (file_exists($rootDir . '/' . $manifestDirectory . '/hot')) {
 			return getenv('WP_SITEURL') . ":8080" . $path;
 		}
-		if (! $manifest) {
+		if (!$manifest) {
 			$manifestPath =  $rootDir . $manifestDirectory . 'mix-manifest.json';
-			if (! file_exists($manifestPath)) {
+			if (!file_exists($manifestPath)) {
 				throw new Exception('The Mix manifest does not exist.');
 			}
 			$manifest = json_decode(file_get_contents($manifestPath), true);
@@ -86,7 +88,7 @@ if (! function_exists('mix')) {
 	}
 }
 
-if ( ! function_exists('assets') ) {
+if (!function_exists('assets')) {
 	/**
 	 * Easily point to the assets dist folder.
 	 *
@@ -94,7 +96,7 @@ if ( ! function_exists('assets') ) {
 	 */
 	function assets($path)
 	{
-		if (! $path) {
+		if (!$path) {
 			return;
 		}
 
@@ -102,7 +104,7 @@ if ( ! function_exists('assets') ) {
 	}
 }
 
-if ( ! function_exists('svg') ) {
+if (!function_exists('svg')) {
 	/**
 	 * Easily point to the assets dist folder.
 	 *
@@ -110,10 +112,19 @@ if ( ! function_exists('svg') ) {
 	 */
 	function svg($path)
 	{
-		if (! $path) {
+		if (!$path) {
 			return;
 		}
 
 		echo get_template_part('assets/dist/svg/inline', $path . '.svg');
+	}
+}
+
+if (!function_exists('console_log')) {
+	function console_log($data)
+	{
+		echo '<script>';
+		echo 'console.log(' . json_encode($data) . ')';
+		echo '</script>';
 	}
 }
